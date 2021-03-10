@@ -1,0 +1,55 @@
+{
+    "config": {
+        "wifi-ssid": {
+            "help": "WiFi SSID",
+            "value": "\"XXXXX\""
+        },
+        "wifi-password": {
+            "help": "WiFi Password",
+            "value": "\"XXXXX\""
+        },
+        "mqtt-broker-hostname": {
+            "help": "MQTT Broker resolvable hostname. <org-id>.messaging.internetofthings.ibmcloud.com",
+            "value": "\"XXXXX\""
+        },
+         "mqtt-device-id": {
+            "help": "d:<org-id>:<device-type>:<device-id>",
+            "value": "\"XXXXX\""
+        },
+        "mqtt-device-username": {
+            "help": "use-token-auth",
+            "value": "\"XXXXX\""
+        },
+        "mqtt-device-password": {
+            "help": "auth token",
+            "value": "\"XXXXX\""
+        },
+        "mqtt-broker-port": {
+            "help": "MQTT Broker port",
+            "value": "1883"
+        },
+        "mqtt-topic": {
+            "help": "MQTT topic to publish. IBM cloud topic must be like iot-2/evt/<user-defined-event-name>/fmt/<json|txt|xml|csv>. More info at https://www.ibm.com/support/knowledgecenter/SSQP8H/iot/platform/devices/mqtt.html",
+            "value": "\"XXXXX\""
+        },
+        "rotation-time": {
+            "help": "Time it takes for full rotation of the mirror in ms",
+            "value": "1000"
+        },
+        "esp-rx-pin": {
+            "help": "ESP8266 module RX pin",
+            "value": "PB_7"
+        },
+        "esp-tx-pin": {
+            "help": "ESP8266 module TX pin",
+            "value": "PB_6"
+        }
+    },
+    "target_overrides": {
+        "*": {
+            "platform.stdio-convert-newlines": true,
+            "esp8266.provide-default" : false,
+            "esp8266.built-in-dns": true
+        }
+    }
+}
